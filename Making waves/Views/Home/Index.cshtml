@@ -1,0 +1,26 @@
+﻿@model Making_waves.Models.ViewValues
+@{
+    ViewBag.Title = "Making Waves";
+}
+
+Group 1
+@{ foreach (var item in Model.group1)
+    {
+        <p>@item.name</p>
+    }
+}
+
+Group 2
+@{ foreach (var item in Model.group2)
+    {
+        <p>@item.name</p>
+    }
+}
+<br />
+Group 3
+@{ foreach (var item in Model.group3)
+    {
+        <p>@item.name</p>
+    }
+}
+
