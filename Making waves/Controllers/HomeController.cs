@@ -21,9 +21,9 @@ namespace Making_waves.Controllers
             // Downloading json
             var reader = new WebClient().DownloadString("https://reqres.in/api/example?per_page=2&page=1");
             // Declearing json to object
-            var jsonObject = JsonConvert.DeserializeObject<pageModel>(reader);
+            var jsonObject = JsonConvert.DeserializeObject<PageModel>(reader);
 
-            viewModel viewValues = new viewModel();
+            ViewModel viewValues = new ViewModel();
             foreach (var j in jsonObject.data.OrderBy(o => o.year))
             {
                 var tmp = j.pantone_value.Split('-');

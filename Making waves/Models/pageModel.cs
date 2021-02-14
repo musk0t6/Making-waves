@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Making_waves.Models
 {
-    public class pageModel
+    public class PageModel
     {
         public int page { get; set; }
         public int per_page { get; set; }
