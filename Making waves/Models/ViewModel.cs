@@ -6,7 +6,7 @@ using Making_waves.Models;
 
 namespace Making_waves.Models
 {
-    public class ViewValues
+    public class ViewModel
     {
         public List<Making_waves.Models.Data> group1 = new List<Data>();
         public List<Making_waves.Models.Data> group2 = new List<Data>();
