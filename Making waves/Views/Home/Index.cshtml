@@ -3,24 +3,55 @@
     ViewBag.Title = "Making Waves";
 }
 
-Group 1
-@{ foreach (var item in Model.group1)
-    {
-        <p>@item.name</p>
-    }
-}
+    <table style="border-style:solid;border-width:1px;">
+        
+            <tr style="border-style:solid;border-width:1px;">
+                <td>
+                    Group 1<br />
+                    @{ foreach (var item in Model.group1)
+                       {
+                            @item.name<br />
+                            @item.year<br />
+                            @item.color<br />
+                            @item.pantone_value
+                       }
+                    }
+                </td>
+            </tr>
+        
+        
+            <tr style="border-style:solid;border-width:1px;">
+                <td>
+                    Group 2<br />
+                    @{ foreach (var item in Model.group2)
+                        {
+                            @item.name<br />
+                            @item.year<br />
+                            @item.color<br />
+                            @item.pantone_value
+                        }
+                    }
+                </td>
+            </tr>
+            <tr style="border-style:solid;border-width:1px;">
+                <td>
+                    Group 3<br />
+                    @{ foreach (var item in Model.group3)
+                        {
+                            @item.name<br />
+                            @item.year<br />
+                            @item.color<br />
+                            @item.pantone_value
+                        }
+                    }
+                </td>
+            </tr>
+        
+    </table>
 
-Group 2
-@{ foreach (var item in Model.group2)
-    {
-        <p>@item.name</p>
-    }
-}
-<br />
-Group 3
-@{ foreach (var item in Model.group3)
-    {
-        <p>@item.name</p>
-    }
-}
+
+
+
+
+
 
