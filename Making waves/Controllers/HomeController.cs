@@ -16,10 +16,15 @@ namespace Making_waves.Controllers
         public ActionResult Index()
         {
             // setting up project directory
-            String directory = AppDomain.CurrentDomain.BaseDirectory;
-
+            string directory = AppDomain.CurrentDomain.BaseDirectory;
+            string reader = "";
             // Downloading json
-            var reader = new WebClient().DownloadString("https://reqres.in/api/example?per_page=2&page=1");
+            try { 
+            reader = new WebClient().DownloadString("https://reqres.in/api/example?per_page=2&page=1");
+            } catch (Exception e)
+            {
+
+            }
             // Declearing json to object
             var jsonObject = JsonConvert.DeserializeObject<PageModel>(reader);
 
