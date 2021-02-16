@@ -20,7 +20,7 @@ namespace Making_waves.Controllers
             string reader = "";
             // Downloading json
             try { 
-            reader = new WebClient().DownloadString("https://reqres.in/api/example?per_page=2&page=1");
+                reader = new WebClient().DownloadString("https://reqres.in/api/example?per_page=2&page=1");
             } catch (Exception e)
             {
 
