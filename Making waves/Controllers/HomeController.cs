@@ -20,7 +20,7 @@ namespace Making_waves.Controllers
             string reader = "";
             // Downloading json
             try { 
-                reader = new WebClient().DownloadString("https://reqres.in/api/example?per_page=2&page=1");
+                reader = new WebClient().DownloadString("https://reqres.in/api/example");
             } catch (Exception e)
             {
 
@@ -35,12 +35,13 @@ namespace Making_waves.Controllers
                 if (int.Parse(tmp[0]) % 3 == 0)
                 {
                     viewValues.group1.Add(j);
+                    continue;
                 }
-                if (int.Parse(tmp[0]) % 2 == 0)
+                else if (int.Parse(tmp[0]) % 2 == 0)
                 {
                     viewValues.group2.Add(j);
                 }
-                if (int.Parse(tmp[0]) % 3 != 0 && int.Parse(tmp[0]) % 2 != 0)
+                else if (int.Parse(tmp[0]) % 3 != 0 && int.Parse(tmp[0]) % 2 != 0)
                 {
                     viewValues.group3.Add(j);
                 }
